@@ -1,0 +1,37 @@
+# --- Sanal Ortam (KESİNLİKLE GİTMEMELİ) ---
+venv/
+env/
+.env
+
+# --- Gereksiz Python Dosyaları ---
+__pycache__/
+*.pyc
+
+# --- Medya Dosyaları (Videolar ve Sesler) ---
+*.mp3
+*.mp4
+*.mkv
+*.avi
+*.mov
+
+# --- Projenin Ürettiği Çıktı Klasörleri ---
+akilli_shorts_cikti/
+temp/
+
+# --- Hassas Bilgiler (GÜVENLİK İÇİN ÇOK ÖNEMLİ) ---
+# Bu dosyaları github'a atarsan API keylerin çalınır!
+client_secret.json
+token.json
+cookies.txt
+*.key
+
+# --- Gereksiz Sistem Dosyaları ---
+.DS_Store
+*.log
+*.backup
+*.save
+
+# Yapay Zeka Modelleri
+*.pt
+*.pth
+yolov8n.pt
