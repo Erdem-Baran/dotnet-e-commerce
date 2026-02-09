@@ -18,10 +18,7 @@
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/rjimswa.dswa.cache.json
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json
-/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/scopedcss/bundle/dotnet-e-commerce.styles.css
-/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/scopedcss/projectbundle/dotnet-e-commerce.bundle.scp.css
-/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/n3w2b2w70b-{0}-lugek5hnai-lugek5hnai.gz
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/cvh1ksadsw-{0}-61n19gt1b8-61n19gt1b8.gz
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/man4jd5rzc-{0}-fr7q2aak1r-fr7q2aak1r.gz
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/0a9agj1rey-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -95,8 +92,6 @@
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/ref/dotnet-e-commerce.dll
 /Users/erdembaran/Desktop/dotnet-e-commerce/bin/Debug/net10.0/package-lock.json
 /Users/erdembaran/Desktop/dotnet-e-commerce/bin/Debug/net10.0/package.json
-/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/ar62vk2fug-{0}-q7f6lundbf-q7f6lundbf.gz
-/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/1y44uj1h4i-{0}-q7f6lundbf-q7f6lundbf.gz
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/rxusn6v9dt-{0}-bb66dgdux2-bb66dgdux2.gz
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/dotnet-e-commerce.sourcelink.json
 /Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/4az6critb6-{0}-034qbpnuth-034qbpnuth.gz
@@ -217,3 +212,8 @@
 /Users/erdembaran/Desktop/dotnet-e-commerce/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 /Users/erdembaran/Desktop/dotnet-e-commerce/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 /Users/erdembaran/Desktop/dotnet-e-commerce/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/947lvco7c7-{0}-ithqj684ym-ithqj684ym.gz
+/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/ybfcbkdtei-{0}-rk6j27o04q-rk6j27o04q.gz
+/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/k1djsr5oil-{0}-8rcskcg0c7-8rcskcg0c7.gz
+/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/fejqj152cy-{0}-yah7cqa9ha-yah7cqa9ha.gz
+/Users/erdembaran/Desktop/dotnet-e-commerce/obj/Debug/net10.0/compressed/4auw77klow-{0}-jac9to0lhj-jac9to0lhj.gz
