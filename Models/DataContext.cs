@@ -25,7 +25,9 @@ public class DataContext : DbContext
                         Price = 499.99,
                         IsActiv = true,
                         HomePage = true,
-                        Image = "1.jpeg"
+                        Image = "1.jpeg",
+                        Description =
+                            "Apple Watch 10 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 10 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
                     },
                     new Product
                     {
@@ -34,7 +36,9 @@ public class DataContext : DbContext
                         Price = 899.99,
                         IsActiv = true,
                         HomePage = true,
-                        Image = "2.jpeg"
+                        Image = "2.jpeg",
+                        Description =
+                            "Apple Watch 11 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 11 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
                     },
                     new Product
                     {
@@ -43,7 +47,9 @@ public class DataContext : DbContext
                         Price = 349.99,
                         IsActiv = true,
                         HomePage = false,
-                        Image = "3.jpeg"
+                        Image = "3.jpeg",
+                        Description =
+                            "Apple Watch 12 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 12 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
                     },
                     new Product
                     {
@@ -52,7 +58,9 @@ public class DataContext : DbContext
                         Price = 1199.99,
                         IsActiv = true,
                         HomePage = false,
-                        Image = "4.jpeg"
+                        Image = "4.jpeg",
+                        Description =
+                            "Apple Watch 13 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 13 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
                     },
                     new Product
                     {
@@ -61,7 +69,42 @@ public class DataContext : DbContext
                         Price = 349.99,
                         IsActiv = true,
                         HomePage = true,
-                        Image = "5.jpeg"
+                        Image = "5.jpeg",
+                        Description =
+                            "Apple Watch 14 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 14 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                    },
+                    new Product
+                    {
+                        Id = 6,
+                        ProductName = "Apple Watch 15",
+                        Price = 349.99,
+                        IsActiv = true,
+                        HomePage = true,
+                        Image = "6.jpeg",
+                        Description =
+                            "Apple Watch 15 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 15 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                    },
+                    new Product
+                    {
+                        Id = 7,
+                        ProductName = "Apple Watch 16",
+                        Price = 349.99,
+                        IsActiv = true,
+                        HomePage = true,
+                        Image = "7.jpeg",
+                        Description =
+                            "Apple Watch 16 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 16 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                    },
+                    new Product
+                    {
+                        Id = 8,
+                        ProductName = "Apple Watch 17",
+                        Price = 349.99,
+                        IsActiv = true,
+                        HomePage = true,
+                        Image = "8.jpeg",
+                        Description =
+                            "Apple Watch 17 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 17 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
                     },
                 }
             );

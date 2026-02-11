@@ -6,6 +6,7 @@ public class Product
     public string ProductName { get; set; } = null!;
     public double Price { get; set; }
     public string Image { get; set; } = null!;
+    public string Description { get; set; } = null!;
     public bool IsActiv { get; set; }
     public bool HomePage { get; set; }
 }
