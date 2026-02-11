@@ -25,6 +25,7 @@ public class DataContext : DbContext
                         Price = 499.99,
                         IsActiv = true,
                         HomePage = true,
+                        Image = "1.jpeg"
                     },
                     new Product
                     {
@@ -33,6 +34,7 @@ public class DataContext : DbContext
                         Price = 899.99,
                         IsActiv = true,
                         HomePage = true,
+                        Image = "2.jpeg"
                     },
                     new Product
                     {
@@ -41,6 +43,7 @@ public class DataContext : DbContext
                         Price = 349.99,
                         IsActiv = true,
                         HomePage = false,
+                        Image = "3.jpeg"
                     },
                     new Product
                     {
@@ -49,6 +52,7 @@ public class DataContext : DbContext
                         Price = 1199.99,
                         IsActiv = true,
                         HomePage = false,
+                        Image = "4.jpeg"
                     },
                     new Product
                     {
@@ -57,6 +61,7 @@ public class DataContext : DbContext
                         Price = 349.99,
                         IsActiv = true,
                         HomePage = true,
+                        Image = "5.jpeg"
                     },
                 }
             );

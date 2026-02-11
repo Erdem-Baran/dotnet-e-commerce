@@ -25,6 +25,10 @@ namespace dotnet_e_commerce.Migrations
                     b.Property<bool>("HomePage")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("IsActiv")
                         .HasColumnType("INTEGER");
 
@@ -44,6 +48,7 @@ namespace dotnet_e_commerce.Migrations
                         {
                             Id = 1,
                             HomePage = true,
+                            Image = "1.jpeg",
                             IsActiv = true,
                             Price = 499.99000000000001,
                             ProductName = "Apple Watch 10"
@@ -52,6 +57,7 @@ namespace dotnet_e_commerce.Migrations
                         {
                             Id = 2,
                             HomePage = true,
+                            Image = "2.jpeg",
                             IsActiv = true,
                             Price = 899.99000000000001,
                             ProductName = "Apple Watch 11"
@@ -60,6 +66,7 @@ namespace dotnet_e_commerce.Migrations
                         {
                             Id = 3,
                             HomePage = false,
+                            Image = "3.jpeg",
                             IsActiv = true,
                             Price = 349.99000000000001,
                             ProductName = "Apple Watch 12"
@@ -68,6 +75,7 @@ namespace dotnet_e_commerce.Migrations
                         {
                             Id = 4,
                             HomePage = false,
+                            Image = "4.jpeg",
                             IsActiv = true,
                             Price = 1199.99,
                             ProductName = "Apple Watch 13"
@@ -76,6 +84,7 @@ namespace dotnet_e_commerce.Migrations
                         {
                             Id = 5,
                             HomePage = true,
+                            Image = "5.jpeg",
                             IsActiv = true,
                             Price = 349.99000000000001,
                             ProductName = "Apple Watch 14"
