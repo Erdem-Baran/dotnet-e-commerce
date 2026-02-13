@@ -15,7 +15,7 @@ public class HomeController : Controller
 
     public ActionResult Index()
     {
-        var products = _context.Products.ToList();
+        var products = _context.Products.Where(item => item.IsActive && item.HomePage).ToList();
         return View(products);
     }
 }

@@ -23,7 +23,7 @@ public class DataContext : DbContext
                         Id = 1,
                         ProductName = "Apple Watch 10",
                         Price = 499.99,
-                        IsActiv = true,
+                        IsActive = true,
                         HomePage = true,
                         Image = "1.jpeg",
                         Description =
@@ -34,7 +34,7 @@ public class DataContext : DbContext
                         Id = 2,
                         ProductName = "Apple Watch 11",
                         Price = 899.99,
-                        IsActiv = true,
+                        IsActive = false,
                         HomePage = true,
                         Image = "2.jpeg",
                         Description =
@@ -45,7 +45,7 @@ public class DataContext : DbContext
                         Id = 3,
                         ProductName = "Apple Watch 12",
                         Price = 349.99,
-                        IsActiv = true,
+                        IsActive = true,
                         HomePage = false,
                         Image = "3.jpeg",
                         Description =
@@ -56,7 +56,7 @@ public class DataContext : DbContext
                         Id = 4,
                         ProductName = "Apple Watch 13",
                         Price = 1199.99,
-                        IsActiv = true,
+                        IsActive = true,
                         HomePage = false,
                         Image = "4.jpeg",
                         Description =
@@ -67,7 +67,7 @@ public class DataContext : DbContext
                         Id = 5,
                         ProductName = "Apple Watch 14",
                         Price = 349.99,
-                        IsActiv = true,
+                        IsActive = true,
                         HomePage = true,
                         Image = "5.jpeg",
                         Description =
@@ -78,7 +78,7 @@ public class DataContext : DbContext
                         Id = 6,
                         ProductName = "Apple Watch 15",
                         Price = 349.99,
-                        IsActiv = true,
+                        IsActive = false,
                         HomePage = true,
                         Image = "6.jpeg",
                         Description =
@@ -89,7 +89,7 @@ public class DataContext : DbContext
                         Id = 7,
                         ProductName = "Apple Watch 16",
                         Price = 349.99,
-                        IsActiv = true,
+                        IsActive = true,
                         HomePage = true,
                         Image = "7.jpeg",
                         Description =
@@ -100,7 +100,7 @@ public class DataContext : DbContext
                         Id = 8,
                         ProductName = "Apple Watch 17",
                         Price = 349.99,
-                        IsActiv = true,
+                        IsActive = false,
                         HomePage = true,
                         Image = "8.jpeg",
                         Description =

@@ -17,7 +17,7 @@ public class ProductController : Controller
     }
     public IActionResult List()
     {
-        var products = _context.Products.ToList();
+        var products = _context.Products.Where(item => item.IsActive).ToList();
         return View(products);
     }
 }
