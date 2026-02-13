@@ -20,4 +20,10 @@ public class ProductController : Controller
         var products = _context.Products.Where(item => item.IsActive).ToList();
         return View(products);
     }
+
+    public ActionResult Details(int id)
+    {
+        var product = _context.Products.FirstOrDefault(item => item.Id == id);
+        return View(product);
+    }
 }
