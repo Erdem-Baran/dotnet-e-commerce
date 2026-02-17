@@ -12,6 +12,43 @@ public class DataContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        modelBuilder
+            .Entity<Category>()
+            .HasData(
+                new List<Category>
+                {
+                    new Category
+                    {
+                        Id = 1,
+                        CategoryName = "Smart Watches",
+                        Url = "smart-watches",
+                    },
+                    new Category
+                    {
+                        Id = 2,
+                        CategoryName = "Laptops",
+                        Url = "laptops",
+                    },
+                    new Category
+                    {
+                        Id = 3,
+                        CategoryName = "Telephone",
+                        Url = "telephone",
+                    },
+                    new Category
+                    {
+                        Id = 4,
+                        CategoryName = "Headphones",
+                        Url = "headphones",
+                    },
+                    new Category
+                    {
+                        Id = 5,
+                        CategoryName = "Electronics",
+                        Url = "electronics",
+                    },
+                }
+            );
 
         modelBuilder
             .Entity<Product>()
@@ -28,6 +65,7 @@ public class DataContext : DbContext
                         Image = "1.jpeg",
                         Description =
                             "Apple Watch 10 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 10 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                        CategoryId = 1,
                     },
                     new Product
                     {
@@ -39,6 +77,7 @@ public class DataContext : DbContext
                         Image = "2.jpeg",
                         Description =
                             "Apple Watch 11 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 11 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                        CategoryId = 1,
                     },
                     new Product
                     {
@@ -50,6 +89,7 @@ public class DataContext : DbContext
                         Image = "3.jpeg",
                         Description =
                             "Apple Watch 12 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 12 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                        CategoryId = 1,
                     },
                     new Product
                     {
@@ -61,6 +101,7 @@ public class DataContext : DbContext
                         Image = "4.jpeg",
                         Description =
                             "Apple Watch 13 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 13 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                        CategoryId = 5,
                     },
                     new Product
                     {
@@ -72,6 +113,7 @@ public class DataContext : DbContext
                         Image = "5.jpeg",
                         Description =
                             "Apple Watch 14 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 14 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                        CategoryId = 5,
                     },
                     new Product
                     {
@@ -83,6 +125,7 @@ public class DataContext : DbContext
                         Image = "6.jpeg",
                         Description =
                             "Apple Watch 15 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 15 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                        CategoryId = 5,
                     },
                     new Product
                     {
@@ -94,6 +137,7 @@ public class DataContext : DbContext
                         Image = "7.jpeg",
                         Description =
                             "Apple Watch 16 is the latest smartwatch from Apple, featuring a sleek design, advanced healt tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 16 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                        CategoryId = 1,
                     },
                     new Product
                     {
@@ -105,6 +149,7 @@ public class DataContext : DbContext
                         Image = "8.jpeg",
                         Description =
                             "Apple Watch 17 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 17 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
+                        CategoryId = 1,
                     },
                 }
             );
