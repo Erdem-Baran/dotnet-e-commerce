@@ -9,4 +9,6 @@ public class Product
     public string Description { get; set; } = null!;
     public bool IsActive { get; set; }
     public bool HomePage { get; set; }
+    public int CategoryId { get; set; }
+    public Category Category { get; set; } = new();
 }
