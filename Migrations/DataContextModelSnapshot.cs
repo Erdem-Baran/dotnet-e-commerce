@@ -32,7 +32,7 @@ namespace dotnet_e_commerce.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
 
                     b.HasData(
                         new
