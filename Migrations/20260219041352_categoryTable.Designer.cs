@@ -10,7 +10,7 @@ using dotnet_e_commerce.Models;
 namespace dotnet_e_commerce.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20260219040743_categoryTable")]
+    [Migration("20260219041352_categoryTable")]
     partial class categoryTable
     {
         /// <inheritdoc />
@@ -67,6 +67,36 @@ namespace dotnet_e_commerce.Migrations
                             Id = 5,
                             CategoryName = "Electronics",
                             Url = "electronics"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryName = "computers",
+                            Url = "computers"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryName = "category-1",
+                            Url = "category-1"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryName = "category-2",
+                            Url = "category-2"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryName = "category-3",
+                            Url = "category-3"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CategoryName = "category-4",
+                            Url = "category-4"
                         });
                 });
 

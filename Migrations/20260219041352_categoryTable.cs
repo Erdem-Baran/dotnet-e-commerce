@@ -42,7 +42,12 @@ namespace dotnet_e_commerce.Migrations
                     { 2, "Laptops", "laptops" },
                     { 3, "Telephone", "telephone" },
                     { 4, "Headphones", "headphones" },
-                    { 5, "Electronics", "electronics" }
+                    { 5, "Electronics", "electronics" },
+                    { 6, "computers", "computers" },
+                    { 7, "category-1", "category-1" },
+                    { 8, "category-2", "category-2" },
+                    { 9, "category-3", "category-3" },
+                    { 10, "category-4", "category-4" }
                 });
 
             migrationBuilder.UpdateData(

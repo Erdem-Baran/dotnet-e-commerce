@@ -48,6 +48,36 @@ public class DataContext : DbContext
                         CategoryName = "Electronics",
                         Url = "electronics",
                     },
+                    new Category
+                    {
+                        Id = 6,
+                        CategoryName = "computers",
+                        Url = "computers",
+                    },
+                    new Category
+                    {
+                        Id = 7,
+                        CategoryName = "category-1",
+                        Url = "category-1",
+                    },
+                    new Category
+                    {
+                        Id = 8,
+                        CategoryName = "category-2",
+                        Url = "category-2",
+                    },
+                    new Category
+                    {
+                        Id = 9,
+                        CategoryName = "category-3",
+                        Url = "category-3",
+                    },
+                    new Category
+                    {
+                        Id = 10,
+                        CategoryName = "category-4",
+                        Url = "category-4",
+                    },
                 }
             );
 
