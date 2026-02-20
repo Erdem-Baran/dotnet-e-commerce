@@ -13,7 +13,7 @@ namespace dotnet_e_commerce.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Slider",
+                name: "Sliders",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -26,11 +26,11 @@ namespace dotnet_e_commerce.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Slider", x => x.Id);
+                    table.PrimaryKey("PK_Sliders", x => x.Id);
                 });
 
             migrationBuilder.InsertData(
-                table: "Slider",
+                table: "Sliders",
                 columns: new[] { "Id", "Description", "ImageUrl", "Index", "IsActive", "Title" },
                 values: new object[,]
                 {
@@ -44,7 +44,7 @@ namespace dotnet_e_commerce.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Slider");
+                name: "Sliders");
         }
     }
 }

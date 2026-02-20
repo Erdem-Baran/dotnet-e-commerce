@@ -10,7 +10,7 @@ using dotnet_e_commerce.Models;
 namespace dotnet_e_commerce.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20260220041400_SliderCreated")]
+    [Migration("20260220041808_SliderCreated")]
     partial class SliderCreated
     {
         /// <inheritdoc />
@@ -251,7 +251,7 @@ namespace dotnet_e_commerce.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Slider");
+                    b.ToTable("Sliders");
 
                     b.HasData(
                         new

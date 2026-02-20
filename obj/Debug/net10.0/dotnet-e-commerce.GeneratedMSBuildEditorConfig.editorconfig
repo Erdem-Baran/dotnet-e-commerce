@@ -54,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTmF2YmFyL0RlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Shared/Components/Slider/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvU2xpZGVyL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -68,10 +72,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Shared/partials/_ProductCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL3BhcnRpYWxzL19Qcm9kdWN0Q2FyZC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Shared/partials/_Slider.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL3BhcnRpYWxzL19TbGlkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Shared/partials/_TopBar.cshtml]

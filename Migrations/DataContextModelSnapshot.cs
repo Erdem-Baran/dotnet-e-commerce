@@ -248,7 +248,7 @@ namespace dotnet_e_commerce.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Slider");
+                    b.ToTable("Sliders");
 
                     b.HasData(
                         new
