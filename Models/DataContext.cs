@@ -14,6 +14,43 @@ public class DataContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder
+            .Entity<Slider>()
+            .HasData(
+                new List<Slider>
+                {
+                    new Slider
+                    {
+                        Id = 1,
+                        ImageUrl = "slider-1.jpeg",
+                        Title = "Discover the Latest Tech Trends",
+                        Description =
+                            "Explore our wide range of cutting-edge technology products, from smartwatches to laptops, and stay ahead in the digital world.",
+                        IsActive = true,
+                        Index = 1,
+                    },
+                    new Slider
+                    {
+                        Id = 2,
+                        ImageUrl = "slider-2.jpeg",
+                        Title = "Upgrade Your Lifestyle with Smart Devices",
+                        Description =
+                            "Transform your daily routine with our selection of smart devices, designed to enhance convenience and connectivity in your life.",
+                        IsActive = true,
+                        Index = 2,
+                    },
+                    new Slider
+                    {
+                        Id = 3,
+                        ImageUrl = "slider-3.jpeg",
+                        Title = "Experience Innovation at Your Fingertips",
+                        Description =
+                            "Discover the future of technology with our innovative products that combine style, functionality, and performance for an unparalleled user experience.",
+                        IsActive = true,
+                        Index = 3,
+                    },
+                }
+            );
+        modelBuilder
             .Entity<Category>()
             .HasData(
                 new List<Category>
