@@ -4,6 +4,11 @@
         <div class="container">
             <h3 class="h-4 mb-1 mb-lg-3">Product List</h3>
 
+            if(model.Count == 0)
+            {
+                <div class="alert alert-info">No products found in this category.</div>
+            }
+
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
                 @foreach (var item in Model)
                 {
