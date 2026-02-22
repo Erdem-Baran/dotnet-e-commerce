@@ -11,13 +11,17 @@ public class ProductController : Controller
     {
         _context = context;
     }
+
     public IActionResult Index()
     {
         return View();
     }
-    public IActionResult List()
+
+    public IActionResult List(string url)
     {
-        var products = _context.Products.Where(item => item.IsActive).ToList();
+        var products = _context
+            .Products.Where(item => item.IsActive && item.Category.Url == url)
+            .ToList();
         return View(products);
     }
 
