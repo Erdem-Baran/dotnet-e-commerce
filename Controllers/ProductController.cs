@@ -31,7 +31,7 @@ public class ProductController : Controller
 
         if (product == null)
         {
-            return RedirectToAction("List");
+            return RedirectToAction("Index", "Home");
         }
 
         ViewData["SmilarProducts"] = _context
