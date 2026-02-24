@@ -1,5 +1,9 @@
 @model Product;
 
+@{
+    var products = (List<Product>)ViewData["SmilarProducts"]!;
+
+    if(products.Count > 0){
     <section class="mt-3">
         <div class="container">
             <div class="row">
@@ -72,25 +76,32 @@
     <div class="container">
         <h4 class="mb-3">Benzer Ürünler</h4>
         <div class="row gy-3">
+
+            @foreach(var item in products)
+            {
             <div class="col-lg-3 col-sm-6 col-12">
                 <div class="card shadow">
                     <div class="img-wrap">
                         <span class="fa fa-regular fa-heart"></span>
-                        <img src="~/img/1.jpeg" alt="ürün 1" class="card-img-top">
+                        <img src="~/img/@item.Image" alt="@item.ProductName" class="card-img-top">
                     </div>
                         <div class="border-top info-wrap">
-                            <a href="details.html" class="title text-truncate">Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon</a>
+                            <a href="details.html" class="title text-truncate">@item.ProductName</a>
                             <div class="price-wrap mb-3">
-                                <span class="price-discount">45.999 ₺</span>
+                                <span class="price-discount">@item.Price ₺</span>
                                 <del class="price">49.999 ₺</del>
                             </div>
-                            <a href="#" class="btn btn-light w-100">
+                            <a href="/Product/Details/@item.Id" class="btn btn-light w-100">
                                 <i class="fa fa-shopping-basket me-1"></i> Sepete Ekle
                             </a>
                         </div>
                     </div>
             </div>
+            }
+
         </div>
 
     </div>
     </section>
+}
+}
