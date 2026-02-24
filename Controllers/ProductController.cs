@@ -28,6 +28,16 @@ public class ProductController : Controller
     public ActionResult Details(int id)
     {
         var product = _context.Products.FirstOrDefault(item => item.Id == id);
+
+        if (product == null)
+        {
+            return RedirectToAction("List");
+        }
+
+        ViewData["SmilarProducts"] = _context
+            .Products.Where(i => i.IsActive && i.CategoryId == product.CategoryId && i.Id != id)
+            .Take(4)
+            .ToList();
         return View(product);
     }
 }
