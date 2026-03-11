@@ -17,7 +17,7 @@ public class ProductController : Controller
         return View();
     }
 
-    public IActionResult List(string url)
+    public IActionResult List(string url, string q)
     {
         var products = _context
             .Products.Where(item => item.IsActive && item.Category.Url == url)
