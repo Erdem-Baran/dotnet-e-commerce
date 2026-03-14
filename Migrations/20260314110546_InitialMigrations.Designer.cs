@@ -10,8 +10,8 @@ using dotnet_e_commerce.Models;
 namespace dotnet_e_commerce.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20260220041808_SliderCreated")]
-    partial class SliderCreated
+    [Migration("20260314110546_InitialMigrations")]
+    partial class InitialMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
