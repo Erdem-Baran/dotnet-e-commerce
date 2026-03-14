@@ -31,7 +31,7 @@ public class ProductController : Controller
         // var products = _context
         //     .Products.Where(item => item.IsActive && item.Category.Url == url)
         //     .ToList();
-        return View(query.ToList());
+        return View(query.Where(i => i.IsActive).ToList());
     }
 
     public ActionResult Details(int id)
