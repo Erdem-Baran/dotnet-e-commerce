@@ -27,6 +27,7 @@ public class ProductController : Controller
         if (!string.IsNullOrEmpty(q))
         {
             query = query.Where(item => item.ProductName.ToLower().Contains(q.ToLower()));
+            ViewData["q"] = q;
         }
         return View(query.ToList());
     }
