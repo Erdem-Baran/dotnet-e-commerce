@@ -19,10 +19,19 @@ public class ProductController : Controller
 
     public IActionResult List(string url, string q)
     {
-        var products = _context
-            .Products.Where(item => item.IsActive && item.Category.Url == url)
-            .ToList();
-        return View(products);
+        var query = _context.Products.AsQueryable();
+        if (string.IsNullOrEmpty(url))
+        {
+            query = query.Where(item => item.Category.Url == url);
+        }
+        if (string.IsNullOrEmpty(q))
+        {
+            query = query.Where(item => item.ProductName.ToLower().Contains(q.ToLower()));
+        }
+        // var products = _context
+        //     .Products.Where(item => item.IsActive && item.Category.Url == url)
+        //     .ToList();
+        return View(query.ToList());
     }
 
     public ActionResult Details(int id)
