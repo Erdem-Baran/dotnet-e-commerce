@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using dotnet_e_commerce.Models;
+using dotnet_store.Models;
 
 #nullable disable
 
-namespace dotnet_e_commerce.Migrations
+namespace dotnet_store.Migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot
@@ -14,15 +14,15 @@ namespace dotnet_e_commerce.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.2");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
 
-            modelBuilder.Entity("dotnet_e_commerce.Models.Category", b =>
+            modelBuilder.Entity("dotnet_store.Models.Kategori", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("CategoryName")
+                    b.Property<string>("KategoriAdi")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -32,268 +32,266 @@ namespace dotnet_e_commerce.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Kategoriler");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CategoryName = "Smart Watches",
-                            Url = "smart-watches"
+                            KategoriAdi = "Telefon",
+                            Url = "telefon"
                         },
                         new
                         {
                             Id = 2,
-                            CategoryName = "Laptops",
-                            Url = "laptops"
+                            KategoriAdi = "Elektronik",
+                            Url = "elektronik"
                         },
                         new
                         {
                             Id = 3,
-                            CategoryName = "Telephone",
-                            Url = "telephone"
+                            KategoriAdi = "Beyaz Eşya",
+                            Url = "beyaz-esya"
                         },
                         new
                         {
                             Id = 4,
-                            CategoryName = "Headphones",
-                            Url = "headphones"
+                            KategoriAdi = "Giyim",
+                            Url = "giyim"
                         },
                         new
                         {
                             Id = 5,
-                            CategoryName = "Electronics",
-                            Url = "electronics"
+                            KategoriAdi = "Kozmetik",
+                            Url = "kozmetik"
                         },
                         new
                         {
                             Id = 6,
-                            CategoryName = "computers",
-                            Url = "computers"
+                            KategoriAdi = "Kategori 1",
+                            Url = "kategori-1"
                         },
                         new
                         {
                             Id = 7,
-                            CategoryName = "category-1",
-                            Url = "category-1"
+                            KategoriAdi = "Kategori 2",
+                            Url = "kategori-2"
                         },
                         new
                         {
                             Id = 8,
-                            CategoryName = "category-2",
-                            Url = "category-2"
+                            KategoriAdi = "Kategori 3",
+                            Url = "kategori-3"
                         },
                         new
                         {
                             Id = 9,
-                            CategoryName = "category-3",
-                            Url = "category-3"
+                            KategoriAdi = "Kategori 4",
+                            Url = "kategori-4"
                         },
                         new
                         {
                             Id = 10,
-                            CategoryName = "category-4",
-                            Url = "category-4"
+                            KategoriAdi = "Kategori 5",
+                            Url = "kategori-5"
                         });
                 });
 
-            modelBuilder.Entity("dotnet_e_commerce.Models.Product", b =>
+            modelBuilder.Entity("dotnet_store.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
+                    b.Property<string>("Aciklama")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("HomePage")
+                    b.Property<bool>("Aktif")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("REAL");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CategoryId = 1,
-                            Description = "Apple Watch 10 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 10 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                            HomePage = true,
-                            Image = "1.jpeg",
-                            IsActive = true,
-                            Price = 499.99000000000001,
-                            ProductName = "Apple Watch 10"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CategoryId = 1,
-                            Description = "Apple Watch 11 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 11 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                            HomePage = true,
-                            Image = "2.jpeg",
-                            IsActive = false,
-                            Price = 899.99000000000001,
-                            ProductName = "Apple Watch 11"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CategoryId = 1,
-                            Description = "Apple Watch 12 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 12 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                            HomePage = false,
-                            Image = "3.jpeg",
-                            IsActive = true,
-                            Price = 349.99000000000001,
-                            ProductName = "Apple Watch 12"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CategoryId = 5,
-                            Description = "Apple Watch 13 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 13 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                            HomePage = false,
-                            Image = "4.jpeg",
-                            IsActive = true,
-                            Price = 1199.99,
-                            ProductName = "Apple Watch 13"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CategoryId = 5,
-                            Description = "Apple Watch 14 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 14 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                            HomePage = true,
-                            Image = "5.jpeg",
-                            IsActive = true,
-                            Price = 349.99000000000001,
-                            ProductName = "Apple Watch 14"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CategoryId = 5,
-                            Description = "Apple Watch 15 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 15 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                            HomePage = true,
-                            Image = "6.jpeg",
-                            IsActive = false,
-                            Price = 349.99000000000001,
-                            ProductName = "Apple Watch 15"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CategoryId = 1,
-                            Description = "Apple Watch 16 is the latest smartwatch from Apple, featuring a sleek design, advanced healt tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 16 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                            HomePage = true,
-                            Image = "7.jpeg",
-                            IsActive = true,
-                            Price = 349.99000000000001,
-                            ProductName = "Apple Watch 16"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CategoryId = 1,
-                            Description = "Apple Watch 17 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 17 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                            HomePage = true,
-                            Image = "8.jpeg",
-                            IsActive = false,
-                            Price = 349.99000000000001,
-                            ProductName = "Apple Watch 17"
-                        });
-                });
-
-            modelBuilder.Entity("dotnet_e_commerce.Models.Slider", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
+                    b.Property<string>("Baslik")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Index")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Title")
+                    b.Property<string>("Resim")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliderlar");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Description = "Explore our wide range of cutting-edge technology products, from smartwatches to laptops, and stay ahead in the digital world.",
-                            ImageUrl = "slider-1.jpeg",
-                            Index = 1,
-                            IsActive = true,
-                            Title = "Discover the Latest Tech Trends"
+                            Aciklama = "Slider 1 Açıklama",
+                            Aktif = true,
+                            Baslik = "Slider 1 Başlık",
+                            Index = 0,
+                            Resim = "slider-1.jpeg"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Transform your daily routine with our selection of smart devices, designed to enhance convenience and connectivity in your life.",
-                            ImageUrl = "slider-2.jpeg",
-                            Index = 2,
-                            IsActive = true,
-                            Title = "Upgrade Your Lifestyle with Smart Devices"
+                            Aciklama = "Slider 2 Açıklama",
+                            Aktif = true,
+                            Baslik = "Slider 2 Başlık",
+                            Index = 1,
+                            Resim = "slider-2.jpeg"
                         },
                         new
                         {
                             Id = 3,
-                            Description = "Discover the future of technology with our innovative products that combine style, functionality, and performance for an unparalleled user experience.",
-                            ImageUrl = "slider-3.jpeg",
-                            Index = 3,
-                            IsActive = true,
-                            Title = "Experience Innovation at Your Fingertips"
+                            Aciklama = "Slider 3 Açıklama",
+                            Aktif = true,
+                            Baslik = "Slider 3 Başlık",
+                            Index = 2,
+                            Resim = "slider-3.jpeg"
                         });
                 });
 
-            modelBuilder.Entity("dotnet_e_commerce.Models.Product", b =>
+            modelBuilder.Entity("dotnet_store.Models.Urun", b =>
                 {
-                    b.HasOne("dotnet_e_commerce.Models.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Aciklama")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Aktif")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Anasayfa")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Fiyat")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("KategoriId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Resim")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UrunAdi")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("KategoriId");
+
+                    b.ToTable("Urunler");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Aciklama = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                            Aktif = false,
+                            Anasayfa = true,
+                            Fiyat = 10000.0,
+                            KategoriId = 1,
+                            Resim = "1.jpeg",
+                            UrunAdi = "Apple Watch 7"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Aciklama = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                            Aktif = true,
+                            Anasayfa = true,
+                            Fiyat = 20000.0,
+                            KategoriId = 1,
+                            Resim = "2.jpeg",
+                            UrunAdi = "Apple Watch 8"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Aciklama = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                            Aktif = true,
+                            Anasayfa = true,
+                            Fiyat = 30000.0,
+                            KategoriId = 2,
+                            Resim = "3.jpeg",
+                            UrunAdi = "Apple Watch 9"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Aciklama = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                            Aktif = false,
+                            Anasayfa = false,
+                            Fiyat = 40000.0,
+                            KategoriId = 2,
+                            Resim = "4.jpeg",
+                            UrunAdi = "Apple Watch 10"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Aciklama = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                            Aktif = true,
+                            Anasayfa = true,
+                            Fiyat = 50000.0,
+                            KategoriId = 2,
+                            Resim = "5.jpeg",
+                            UrunAdi = "Apple Watch 11"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Aciklama = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                            Aktif = false,
+                            Anasayfa = false,
+                            Fiyat = 60000.0,
+                            KategoriId = 3,
+                            Resim = "6.jpeg",
+                            UrunAdi = "Apple Watch 12"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Aciklama = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                            Aktif = false,
+                            Anasayfa = false,
+                            Fiyat = 70000.0,
+                            KategoriId = 3,
+                            Resim = "7.jpeg",
+                            UrunAdi = "Apple Watch 14"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Aciklama = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                            Aktif = true,
+                            Anasayfa = true,
+                            Fiyat = 80000.0,
+                            KategoriId = 4,
+                            Resim = "8.jpeg",
+                            UrunAdi = "Apple Watch 15"
+                        });
+                });
+
+            modelBuilder.Entity("dotnet_store.Models.Urun", b =>
+                {
+                    b.HasOne("dotnet_store.Models.Kategori", "Kategori")
+                        .WithMany("Uruns")
+                        .HasForeignKey("KategoriId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("Kategori");
                 });
 
-            modelBuilder.Entity("dotnet_e_commerce.Models.Category", b =>
+            modelBuilder.Entity("dotnet_store.Models.Kategori", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("Uruns");
                 });
 #pragma warning restore 612, 618
         }

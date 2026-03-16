@@ -1,15 +1,15 @@
-using dotnet_e_commerce.Models;
+using dotnet_store.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<DataContext>(Options =>
+
+builder.Services.AddDbContext<DataContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-    Options.UseSqlite(connectionString);
+    options.UseSqlite(connectionString);
 });
 
 var app = builder.Build();
@@ -23,21 +23,26 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
 
 app.MapStaticAssets();
 
+// urunler/telefon
+// urunler/elektronik
+// urunler/beyaz-esya
+
 app.MapControllerRoute(
-        name: "products_by_category",
-        pattern: "products/{url?}",
-        defaults: new { controller = "Product", action = "List" }
-    )
+    name: "urunler_by_kategori",
+    pattern: "urunler/{url?}",
+    defaults: new { controller = "Urun", action = "List" })
     .WithStaticAssets();
 
-app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}")
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
 
 app.Run();

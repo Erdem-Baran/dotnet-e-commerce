@@ -1,11 +1,11 @@
-namespace dotnet_e_commerce.Models;
+namespace dotnet_store.Models;
 
 public class Slider
 {
     public int Id { get; set; }
-    public string ImageUrl { get; set; } = null!;
-    public string? Title { get; set; }
-    public string? Description { get; set; }
-    public bool IsActive { get; set; }
+    public string? Baslik { get; set; }
+    public string? Aciklama { get; set; }
+    public string Resim { get; set; } = null!;
     public int Index { get; set; }
+    public bool Aktif { get; set; }
 }

@@ -1,7 +1,8 @@
-using dotnet_e_commerce.Models;
+
+using dotnet_store.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace dotnet_e_commerce.ViewComponents;
+namespace dotnet_store.ViewComponents;
 
 public class Slider : ViewComponent
 {
@@ -14,6 +15,6 @@ public class Slider : ViewComponent
 
     public IViewComponentResult Invoke()
     {
-        return View(_context.Sliders.ToList());
+        return View(_context.Sliderlar.ToList());
     }
 }

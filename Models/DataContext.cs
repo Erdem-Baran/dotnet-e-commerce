@@ -1,226 +1,132 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace dotnet_e_commerce.Models;
+namespace dotnet_store.Models;
 
 public class DataContext : DbContext
 {
-    public DataContext(DbContextOptions<DataContext> options)
-        : base(options) { }
+    public DataContext(DbContextOptions<DataContext> options) : base(options)
+    {
 
-    public DbSet<Product> Products { get; set; }
-    public DbSet<Category> Categories { get; set; }
-    public DbSet<Slider> Sliders { get; set; }
+    }
+    public DbSet<Urun> Urunler { get; set; }
+    public DbSet<Kategori> Kategoriler { get; set; }
+    public DbSet<Slider> Sliderlar { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder
-            .Entity<Slider>()
-            .HasData(
-                new List<Slider>
-                {
-                    new Slider
-                    {
-                        Id = 1,
-                        ImageUrl = "slider-1.jpeg",
-                        Title = "Discover the Latest Tech Trends",
-                        Description =
-                            "Explore our wide range of cutting-edge technology products, from smartwatches to laptops, and stay ahead in the digital world.",
-                        IsActive = true,
-                        Index = 1,
-                    },
-                    new Slider
-                    {
-                        Id = 2,
-                        ImageUrl = "slider-2.jpeg",
-                        Title = "Upgrade Your Lifestyle with Smart Devices",
-                        Description =
-                            "Transform your daily routine with our selection of smart devices, designed to enhance convenience and connectivity in your life.",
-                        IsActive = true,
-                        Index = 2,
-                    },
-                    new Slider
-                    {
-                        Id = 3,
-                        ImageUrl = "slider-3.jpeg",
-                        Title = "Experience Innovation at Your Fingertips",
-                        Description =
-                            "Discover the future of technology with our innovative products that combine style, functionality, and performance for an unparalleled user experience.",
-                        IsActive = true,
-                        Index = 3,
-                    },
-                }
-            );
-        modelBuilder
-            .Entity<Category>()
-            .HasData(
-                new List<Category>
-                {
-                    new Category
-                    {
-                        Id = 1,
-                        CategoryName = "Smart Watches",
-                        Url = "smart-watches",
-                    },
-                    new Category
-                    {
-                        Id = 2,
-                        CategoryName = "Laptops",
-                        Url = "laptops",
-                    },
-                    new Category
-                    {
-                        Id = 3,
-                        CategoryName = "Telephone",
-                        Url = "telephone",
-                    },
-                    new Category
-                    {
-                        Id = 4,
-                        CategoryName = "Headphones",
-                        Url = "headphones",
-                    },
-                    new Category
-                    {
-                        Id = 5,
-                        CategoryName = "Electronics",
-                        Url = "electronics",
-                    },
-                    new Category
-                    {
-                        Id = 6,
-                        CategoryName = "computers",
-                        Url = "computers",
-                    },
-                    new Category
-                    {
-                        Id = 7,
-                        CategoryName = "category-1",
-                        Url = "category-1",
-                    },
-                    new Category
-                    {
-                        Id = 8,
-                        CategoryName = "category-2",
-                        Url = "category-2",
-                    },
-                    new Category
-                    {
-                        Id = 9,
-                        CategoryName = "category-3",
-                        Url = "category-3",
-                    },
-                    new Category
-                    {
-                        Id = 10,
-                        CategoryName = "category-4",
-                        Url = "category-4",
-                    },
-                }
-            );
 
-        modelBuilder
-            .Entity<Product>()
-            .HasData(
-                new List<Product>
-                {
-                    new Product
-                    {
-                        Id = 1,
-                        ProductName = "Apple Watch 10",
-                        Price = 499.99,
-                        IsActive = true,
-                        HomePage = true,
-                        Image = "1.jpeg",
-                        Description =
-                            "Apple Watch 10 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 10 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                        CategoryId = 1,
-                    },
-                    new Product
-                    {
-                        Id = 2,
-                        ProductName = "Apple Watch 11",
-                        Price = 899.99,
-                        IsActive = false,
-                        HomePage = true,
-                        Image = "2.jpeg",
-                        Description =
-                            "Apple Watch 11 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 11 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                        CategoryId = 1,
-                    },
-                    new Product
-                    {
-                        Id = 3,
-                        ProductName = "Apple Watch 12",
-                        Price = 349.99,
-                        IsActive = true,
-                        HomePage = false,
-                        Image = "3.jpeg",
-                        Description =
-                            "Apple Watch 12 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 12 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                        CategoryId = 1,
-                    },
-                    new Product
-                    {
-                        Id = 4,
-                        ProductName = "Apple Watch 13",
-                        Price = 1199.99,
-                        IsActive = true,
-                        HomePage = false,
-                        Image = "4.jpeg",
-                        Description =
-                            "Apple Watch 13 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 13 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                        CategoryId = 5,
-                    },
-                    new Product
-                    {
-                        Id = 5,
-                        ProductName = "Apple Watch 14",
-                        Price = 349.99,
-                        IsActive = true,
-                        HomePage = true,
-                        Image = "5.jpeg",
-                        Description =
-                            "Apple Watch 14 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 14 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                        CategoryId = 5,
-                    },
-                    new Product
-                    {
-                        Id = 6,
-                        ProductName = "Apple Watch 15",
-                        Price = 349.99,
-                        IsActive = false,
-                        HomePage = true,
-                        Image = "6.jpeg",
-                        Description =
-                            "Apple Watch 15 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 15 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                        CategoryId = 5,
-                    },
-                    new Product
-                    {
-                        Id = 7,
-                        ProductName = "Apple Watch 16",
-                        Price = 349.99,
-                        IsActive = true,
-                        HomePage = true,
-                        Image = "7.jpeg",
-                        Description =
-                            "Apple Watch 16 is the latest smartwatch from Apple, featuring a sleek design, advanced healt tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 16 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                        CategoryId = 1,
-                    },
-                    new Product
-                    {
-                        Id = 8,
-                        ProductName = "Apple Watch 17",
-                        Price = 349.99,
-                        IsActive = false,
-                        HomePage = true,
-                        Image = "8.jpeg",
-                        Description =
-                            "Apple Watch 17 is the latest smartwatch from Apple, featuring a sleek design, advanced health tracking capabilities, and seamless integration with iOS devices. With its powerful performance and innovative features, the Apple Watch 17 is the perfect companion for fitness enthusiasts and tech-savvy individuals alike.",
-                        CategoryId = 1,
-                    },
+        modelBuilder.Entity<Slider>().HasData(
+            new List<Slider> {
+                new Slider { Id=1, Baslik="Slider 1 Başlık", Aciklama="Slider 1 Açıklama", Resim="slider-1.jpeg", Aktif=true, Index=0},
+                new Slider { Id=2, Baslik="Slider 2 Başlık", Aciklama="Slider 2 Açıklama", Resim="slider-2.jpeg", Aktif=true, Index=1},
+                new Slider { Id=3, Baslik="Slider 3 Başlık", Aciklama="Slider 3 Açıklama", Resim="slider-3.jpeg", Aktif=true, Index=2}
+            }
+        );
+
+        modelBuilder.Entity<Kategori>().HasData(
+            new List<Kategori> {
+                new Kategori {Id=1, KategoriAdi="Telefon", Url="telefon"},
+                new Kategori {Id=2, KategoriAdi="Elektronik", Url="elektronik"},
+                new Kategori {Id=3, KategoriAdi="Beyaz Eşya", Url="beyaz-esya"},
+                new Kategori {Id=4, KategoriAdi="Giyim", Url="giyim"},
+                new Kategori {Id=5, KategoriAdi="Kozmetik", Url="kozmetik"},
+                new Kategori {Id=6, KategoriAdi="Kategori 1", Url="kategori-1"},
+                new Kategori {Id=7, KategoriAdi="Kategori 2", Url="kategori-2"},
+                new Kategori {Id=8, KategoriAdi="Kategori 3", Url="kategori-3"},
+                new Kategori {Id=9, KategoriAdi="Kategori 4", Url="kategori-4"},
+                new Kategori {Id=10, KategoriAdi="Kategori 5", Url="kategori-5"},
+            }
+        );
+
+        modelBuilder.Entity<Urun>().HasData(
+            new List<Urun>()
+            {
+                new Urun() {
+                    Id = 1,
+                    UrunAdi="Apple Watch 7",
+                    Fiyat=10000,
+                    Aktif=false,
+                    Resim="1.jpeg",
+                    Anasayfa=true,
+                    Aciklama="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                    KategoriId=1
+
+                },
+                new Urun() {
+                    Id = 2,
+                    UrunAdi="Apple Watch 8",
+                    Fiyat=20000,
+                    Aktif=true,
+                    Resim="2.jpeg",
+                    Anasayfa=true,
+                    Aciklama="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                    KategoriId=1
+                },
+                new Urun() {
+                    Id = 3,
+                    UrunAdi="Apple Watch 9",
+                    Fiyat=30000,
+                    Aktif=true,
+                    Resim="3.jpeg",
+                    Anasayfa=true,
+                    Aciklama="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                    KategoriId=2
+                },
+                new Urun() {
+                    Id = 4,
+                    UrunAdi="Apple Watch 10",
+                    Fiyat=40000,
+                    Aktif=false,
+                    Resim="4.jpeg",
+                    Anasayfa=false,
+                    Aciklama="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                    KategoriId=2
+                },
+                new Urun() {
+                    Id = 5,
+                    UrunAdi="Apple Watch 11",
+                    Fiyat=50000,
+                    Aktif=true,
+                    Resim="5.jpeg",
+                    Anasayfa=true,
+                    Aciklama="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                    KategoriId=2
+                },
+                new Urun() {
+                    Id = 6,
+                    UrunAdi="Apple Watch 12",
+                    Fiyat=60000,
+                    Aktif=false,
+                    Resim="6.jpeg",
+                    Anasayfa=false,
+                    Aciklama="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                    KategoriId=3
                 }
-            );
+                ,
+                new Urun() {
+                    Id = 7,
+                    UrunAdi="Apple Watch 14",
+                    Fiyat=70000,
+                    Aktif=false,
+                    Resim="7.jpeg",
+                    Anasayfa=false,
+                    Aciklama="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                    KategoriId=3
+                }
+                ,
+                new Urun() {
+                    Id = 8,
+                    UrunAdi="Apple Watch 15",
+                    Fiyat=80000,
+                    Aktif=true,
+                    Resim="8.jpeg",
+                    Anasayfa=true,
+                    Aciklama="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quam accusamus neque tempore, consequatur dolor, nihil impedit recusandae ad adipisci eveniet libero ipsum quidem optio laboriosam, ea ipsa ducimus iusto?",
+                    KategoriId=4
+                },
+            }
+        );
     }
+
 }

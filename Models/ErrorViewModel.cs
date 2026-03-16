@@ -1,4 +1,4 @@
-namespace dotnet_e_commerce.Models;
+namespace dotnet_store.Models;
 
 public class ErrorViewModel
 {

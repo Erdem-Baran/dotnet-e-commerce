@@ -1,13 +1,12 @@
 using System.Diagnostics;
-using dotnet_e_commerce.Models;
 using Microsoft.AspNetCore.Mvc;
+using dotnet_store.Models;
 
-namespace dotnet_e_commerce.Controllers;
+namespace dotnet_store.Controllers;
 
 public class HomeController : Controller
 {
     private readonly DataContext _context;
-
     public HomeController(DataContext context)
     {
         _context = context;
@@ -15,8 +14,9 @@ public class HomeController : Controller
 
     public ActionResult Index()
     {
-        var products = _context.Products.Where(item => item.IsActive && item.HomePage).ToList();
-        ViewData["Categories"] = _context.Categories.ToList();
-        return View(products);
+        var urunler = _context.Urunler.Where(urun => urun.Aktif && urun.Anasayfa).ToList();
+        ViewData["Kategoriler"] = _context.Kategoriler.ToList();
+        return View(urunler);
     }
+
 }
