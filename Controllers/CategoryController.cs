@@ -1,5 +1,6 @@
 using dotnet_store.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace dotnet_store.Controllers;
 
@@ -14,7 +15,7 @@ public class CategoryController : Controller
 
     public IActionResult Index()
     {
-        var categories = _context.Kategoriler.ToList();
+        var categories = _context.Kategoriler.Include(i => i.Uruns).ToList();
         return View(categories);
     }
 }
