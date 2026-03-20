@@ -1,11 +1,20 @@
+using dotnet_store.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnet_store.Controllers;
 
 public class CategoryController : Controller
 {
+    private readonly DataContext _context;
+
+    public CategoryController(DataContext context)
+    {
+        _context = context;
+    }
+
     public IActionResult Index()
     {
-        return View();
+        var categories = _context.Kategoriler.ToList();
+        return View(categories);
     }
 }

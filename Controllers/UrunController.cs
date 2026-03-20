@@ -6,6 +6,7 @@ namespace dotnet_store.Controllers;
 public class UrunController : Controller
 {
     private readonly DataContext _context;
+
     public UrunController(DataContext context)
     {
         _context = context;
@@ -22,7 +23,7 @@ public class UrunController : Controller
     // query string: q   => value
     public ActionResult List(string url, string q)
     {
-        var query = _context.Urunler.Where(i => i.Aktif);   // Queryable
+        var query = _context.Urunler.Where(i => i.Aktif); // Queryable
 
         if (!string.IsNullOrEmpty(url))
         {
@@ -48,10 +49,10 @@ public class UrunController : Controller
             return RedirectToAction("Index", "Home");
         }
 
-        ViewData["BenzerUrunler"] = _context.Urunler
-                                        .Where(i => i.Aktif && i.KategoriId == urun.KategoriId && i.Id != id)
-                                        .Take(4)
-                                        .ToList();
+        ViewData["BenzerUrunler"] = _context
+            .Urunler.Where(i => i.Aktif && i.KategoriId == urun.KategoriId && i.Id != id)
+            .Take(4)
+            .ToList();
 
         return View(urun);
     }
