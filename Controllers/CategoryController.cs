@@ -15,13 +15,15 @@ public class CategoryController : Controller
 
     public IActionResult Index()
     {
-        var categories = _context.Kategoriler.Select(k => new CategoryGetModel
-        {
-            Id = k.Id,
-            KategoriAdi = k.KategoriAdi,
-            Url = k.Url,
-            ProductCount = k.Uruns.Count
-        }).ToList();
+        var categories = _context
+            .Kategoriler.Select(k => new CategoryGetModel
+            {
+                Id = k.Id,
+                KategoriAdi = k.KategoriAdi,
+                Url = k.Url,
+                ProductCount = k.Uruns.Count,
+            })
+            .ToList();
         return View(categories);
     }
 }
