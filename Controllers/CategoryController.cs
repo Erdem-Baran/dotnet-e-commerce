@@ -27,7 +27,14 @@ public class CategoryController : Controller
         return View(categories);
     }
 
+    [HttpGet]
     public IActionResult Create()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Create(string kategoriAdi, string kategoriUrl)
     {
         return View();
     }
