@@ -36,6 +36,8 @@ public class CategoryController : Controller
     [HttpPost]
     public IActionResult Create(string kategoriAdi, string kategoriUrl)
     {
+        var entity = new Kategori { KategoriAdi = kategoriAdi, Url = kategoriUrl };
+        _context.Kategoriler.Add(entity);
         return View();
     }
 }
