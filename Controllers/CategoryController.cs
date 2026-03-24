@@ -38,6 +38,7 @@ public class CategoryController : Controller
     {
         var entity = new Kategori { KategoriAdi = kategoriAdi, Url = kategoriUrl };
         _context.Kategoriler.Add(entity);
-        return View();
+        _context.SaveChanges();
+        return RedirectToAction("Index");
     }
 }
