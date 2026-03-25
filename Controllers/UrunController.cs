@@ -1,12 +1,12 @@
 using dotnet_store.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace dotnet_store.Controllers;
 
 public class UrunController : Controller
 {
     private readonly DataContext _context;
-
     public UrunController(DataContext context)
     {
         _context = context;
@@ -14,16 +14,23 @@ public class UrunController : Controller
 
     public ActionResult Index()
     {
-        return View();
+        var urunler = _context.Urunler.Select(i => new UrunGetModel
+        {
+            Id = i.Id,
+            UrunAdi = i.UrunAdi,
+            Fiyat = i.Fiyat,
+            Aktif = i.Aktif,
+            Anasayfa = i.Anasayfa,
+            KategoriAdi = i.Kategori.KategoriAdi,
+            Resim = i.Resim
+        }).ToList();
+
+        return View(urunler);
     }
 
-    // http://localhost:5162/urunler?q=apple
-    // http://localhost:5162/urunler/telefon?q=apple
-    // route params: url => value
-    // query string: q   => value
     public ActionResult List(string url, string q)
     {
-        var query = _context.Urunler.Where(i => i.Aktif); // Queryable
+        var query = _context.Urunler.Where(i => i.Aktif);
 
         if (!string.IsNullOrEmpty(url))
         {
@@ -49,10 +56,10 @@ public class UrunController : Controller
             return RedirectToAction("Index", "Home");
         }
 
-        ViewData["BenzerUrunler"] = _context
-            .Urunler.Where(i => i.Aktif && i.KategoriId == urun.KategoriId && i.Id != id)
-            .Take(4)
-            .ToList();
+        ViewData["BenzerUrunler"] = _context.Urunler
+                                        .Where(i => i.Aktif && i.KategoriId == urun.KategoriId && i.Id != id)
+                                        .Take(4)
+                                        .ToList();
 
         return View(urun);
     }

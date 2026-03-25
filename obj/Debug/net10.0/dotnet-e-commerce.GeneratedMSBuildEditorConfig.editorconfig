@@ -34,16 +34,16 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Category/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Category/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Kategori/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS2F0ZWdvcmkvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Kategori/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS2F0ZWdvcmkvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/erdembaran/Desktop/dotnet-e-commerce/Views/Shared/Components/Navbar/Default.cshtml]
