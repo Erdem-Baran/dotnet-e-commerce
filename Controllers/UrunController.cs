@@ -76,7 +76,19 @@ public class UrunController : Controller
         [HttpPost]
     public ActionResult Create(string urunAdi, string urunAciklama, double urunFiyat)
     {
-        return View();
+        var entity = new Urun
+        {
+            UrunAdi = urunAdi,
+            Aciklama = urunAciklama,
+            Fiyat = urunFiyat,
+            Aktif = true,
+            Anasayfa = false,
+            KategoriId = 1,
+            Resim = "1.jpeg"
+        };
+        _context.Urunler.Add(entity);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
     }
 
 }
