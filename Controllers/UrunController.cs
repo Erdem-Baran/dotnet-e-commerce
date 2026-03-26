@@ -25,6 +25,7 @@ public class UrunController : Controller
                 Anasayfa = i.Anasayfa,
                 KategoriAdi = i.Kategori.KategoriAdi,
                 Resim = i.Resim,
+                UrunAciklama = i.Aciklama
             })
             .ToList();
 
@@ -68,6 +69,12 @@ public class UrunController : Controller
     }
 
     public ActionResult Create()
+    {
+        return View();
+    }
+
+        [HttpPost]
+    public ActionResult Create(string urunAdi, string urunAciklama, double urunFiyat)
     {
         return View();
     }

@@ -6,7 +6,7 @@ using dotnet_store.Models;
 
 #nullable disable
 
-namespace dotnet_store.Migrations
+namespace dotnet_e_commerce.Migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot
@@ -14,7 +14,7 @@ namespace dotnet_store.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.2");
 
             modelBuilder.Entity("dotnet_store.Models.Kategori", b =>
                 {

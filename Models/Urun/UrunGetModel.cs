@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace dotnet_store.Models;
 
 public class UrunGetModel
@@ -9,4 +11,5 @@ public class UrunGetModel
     public bool Aktif { get; set; }
     public bool Anasayfa { get; set; }
     public string KategoriAdi { get; set; } = null!;
+    public string UrunAciklama { get; set; } = null!;
 }
